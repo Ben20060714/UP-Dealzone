@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UDBL PROD | Hommes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/output.css">
+</head>
+<body class="min-h-screen bg-ink text-paper antialiased">
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-ink/80 backdrop-blur-xl">
+    <div class="mx-auto flex w-[min(100%-1.5rem,76rem)] items-center justify-between gap-4 py-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <span class="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-coral to-violet text-sm font-extrabold text-white">UP</span>
+        <span>
+          <span class="block font-display text-2xl leading-none text-white">UDBL PROD</span>
+          <span class="mt-1 block text-[0.68rem] font-bold uppercase tracking-[0.35em] text-paper/60">section hommes</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-6 text-sm text-paper/70 md:flex">
+        <a class="transition hover:text-white" href="index.html">Accueil</a>
+        <a class="transition hover:text-white" href="dames.html">Dames</a>
+        <a class="text-white" href="hommes.html">Hommes</a>
+        <a class="transition hover:text-white" href="panier.html">Panier</a>
+      </nav>
+      <a href="panier.html" class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/8 px-4 py-2 text-sm font-bold text-white">
+        <span>Panier</span>
+        <span data-cart-count class="grid min-h-7 min-w-7 place-items-center rounded-full bg-coral px-2 text-xs text-white">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="mx-auto w-[min(100%-1.5rem,76rem)] py-8 md:py-14">
+    <section class="rounded-[2rem] border border-white/10 bg-white/6 p-6 shadow-panel backdrop-blur-xl md:p-10">
+      <p class="text-xs font-extrabold uppercase tracking-[0.3em] text-violet-soft">hommes</p>
+      <div class="mt-4 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+        <div>
+          <h1 class="font-display text-5xl leading-none text-white md:text-6xl">Selection hommes</h1>
+          <!-- <p class="mt-4 max-w-2xl text-sm leading-7 text-paper/70 md:text-base">Une page plus structuree, plus sombre et plus nette pour les articles masculins de la boutique.</p> -->
+        </div>
+        <a href="panier.html" class="inline-flex rounded-full bg-violet px-6 py-3 text-sm font-extrabold text-white shadow-[0_18px_40px_rgba(109,91,255,0.28)] transition hover:-translate-y-0.5 hover:bg-violet-strong">Voir le panier</a>
+      </div>
+    </section>
+
+    <section class="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      <article class="overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 shadow-panel backdrop-blur-xl" data-product-name="Chemise Atlas" data-product-price="33$" data-product-category="Hommes" data-product-image="img/IMG-20251129-WA0162.jpg" data-product-description="Chemise polyvalente pour bureau, sortie et style propre. Une base solide pour la vitrine hommes.">
+        <div class="rounded-[1.7rem] bg-center bg-cover p-6" style="background-image: url('img/IMG-20251129-WA0162.jpg');">
+          <div class="flex min-h-64 items-end rounded-[1.5rem] border border-white/12 bg-white/10 p-4">
+            <h2 class="font-display text-4xl leading-none text-white">Chemise Atlas</h2>
+          </div>
+        </div>
+        <div class="px-2 pb-2 pt-5">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-extrabold text-white">Chemise Atlas</h3>
+            <span class="rounded-full bg-mint/15 px-3 py-1 text-sm font-extrabold text-mint">33$</span>
+          </div>
+          <p class="mt-4 text-sm leading-7 text-paper/68">Chemise polyvalente pour bureau, sortie et style propre. Une base solide.</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-paper/70">
+            <span class="rounded-full border border-white/10 px-3 py-2">classique</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">hommes</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">best seller</span>
+          </div>
+          <div class="mt-6 flex flex-wrap justify-center gap-3">
+            <button data-open-preview class="hidden rounded-2xl border border-mint/30 bg-mint/10 px-4 py-3 text-sm font-bold text-mint transition hover:-translate-y-0.5 hover:bg-mint/16">Apercu</button>
+            <button data-order-now class="rounded-2xl bg-green-600 px-4 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-green-500">Commander</button>
+            <button data-add-to-cart class="rounded-2xl border border-white/12 bg-white/8 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Ajouter au panier</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 shadow-panel backdrop-blur-xl" data-product-name="Montre Noir Carbone" data-product-price="44$" data-product-category="Hommes" data-product-image="img/Montres3.webp" data-product-description="Montre dense et sobre pour renforcer le caractere premium de la boutique.">
+        <div class="rounded-[1.7rem] bg-center bg-cover p-6" style="background-image: url('img/Montres3.webp');">
+          <div class="flex min-h-64 items-end rounded-[1.5rem] border border-white/12 bg-white/10 p-4">
+            <h2 class="font-display text-4xl leading-none text-white">Montre Noir Carbone</h2>
+          </div>
+        </div>
+        <div class="px-2 pb-2 pt-5">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-extrabold text-white">Montre Noir Carbone</h3>
+            <span class="rounded-full bg-violet/18 px-3 py-1 text-sm font-extrabold text-violet-soft">44$</span>
+          </div>
+          <p class="mt-4 text-sm leading-7 text-paper/68">Montre dense et sobre pour renforcer le caractere premium de la boutique.</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-paper/70">
+            <span class="rounded-full border border-white/10 px-3 py-2">accessoire</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">elegant</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">hommes</span>
+          </div>
+          <div class="mt-6 flex flex-wrap justify-center gap-3">
+            <button data-open-preview class="hidden rounded-2xl border border-violet/30 bg-violet/12 px-4 py-3 text-sm font-bold text-violet-soft transition hover:-translate-y-0.5 hover:bg-violet/18">Apercu</button>
+            <button data-order-now class="rounded-2xl bg-green-600 px-4 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-green-500">Commander</button>
+            <button data-add-to-cart class="rounded-2xl border border-white/12 bg-white/8 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Ajouter au panier</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 shadow-panel backdrop-blur-xl" data-product-name="Sneakers Horizon" data-product-price="52$" data-product-category="Hommes" data-product-image="img/Shoes3.webp" data-product-description="Basket moderne pour une ligne casual plus visible, plus jeune et plus urbaine.">
+        <div class="rounded-[1.7rem] bg-center bg-cover p-6" style="background-image: url('img/Shoes3.webp');">
+          <div class="flex min-h-64 items-end rounded-[1.5rem] border border-white/12 bg-white/10 p-4">
+            <h2 class="font-display text-4xl leading-none text-white">Sneakers Horizon</h2>
+          </div>
+        </div>
+        <div class="px-2 pb-2 pt-5">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-extrabold text-white">Sneakers Horizon</h3>
+            <span class="rounded-full bg-sky-400/18 px-3 py-1 text-sm font-extrabold text-sky-200">52$</span>
+          </div>
+          <p class="mt-4 text-sm leading-7 text-paper/68">Basket moderne pour une ligne casual plus visible, plus jeune et plus urbaine.</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-paper/70">
+            <span class="rounded-full border border-white/10 px-3 py-2">street</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">confort</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">hommes</span>
+          </div>
+          <div class="mt-6 flex flex-wrap justify-center gap-3">
+            <button data-open-preview class="hidden rounded-2xl border border-sky-300/30 bg-sky-400/10 px-4 py-3 text-sm font-bold text-sky-200 transition hover:-translate-y-0.5 hover:bg-sky-400/16">Apercu</button>
+            <button data-order-now class="rounded-2xl bg-green-600 px-4 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-green-500">Commander</button>
+            <button data-add-to-cart class="rounded-2xl border border-white/12 bg-white/8 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Ajouter au panier</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 shadow-panel backdrop-blur-xl" data-product-name="Veste Ember Line" data-product-price="64$" data-product-category="Hommes" data-product-image="img/Black_Pink Long Sleeves Ruffle Gothic Military Elegant Princess Lolit.jpg" data-product-description="Veste de caractere pour une fin de grille plus forte et plus mature dans l'univers hommes.">
+        <div class="rounded-[1.7rem] bg-center bg-cover p-6" style="background-image: url('img/Black_Pink Long Sleeves Ruffle Gothic Military Elegant Princess Lolit.jpg');">
+          <div class="flex min-h-64 items-end rounded-[1.5rem] border border-white/12 bg-white/10 p-4">
+            <h2 class="font-display text-4xl leading-none text-white">Veste Ember Line</h2>
+          </div>
+        </div>
+        <div class="px-2 pb-2 pt-5">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-extrabold text-white">Veste Ember Line</h3>
+            <span class="rounded-full bg-orange-400/18 px-3 py-1 text-sm font-extrabold text-orange-200">64$</span>
+          </div>
+          <p class="mt-4 text-sm leading-7 text-paper/68">Veste de caractere pour une fin de grille plus forte et plus mature dans l'univers.</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-paper/70">
+            <span class="rounded-full border border-white/10 px-3 py-2">statement</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">urbain</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">hommes</span>
+          </div>
+          <div class="mt-6 flex flex-wrap justify-center gap-3">
+            <button data-open-preview class="hidden rounded-2xl border border-orange-300/30 bg-orange-400/10 px-4 py-3 text-sm font-bold text-orange-200 transition hover:-translate-y-0.5 hover:bg-orange-400/16">Apercu</button>
+            <button data-order-now class="rounded-2xl bg-green-600 px-4 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-green-500">Commander</button>
+            <button data-add-to-cart class="rounded-2xl border border-white/12 bg-white/8 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Ajouter au panier</button>
+          </div>
+        </div>
+      </article>
+      <article class="overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 shadow-panel backdrop-blur-xl" data-product-name="Mocassin" data-product-price="23$" data-product-category="Hommes" data-product-image="img/1117954-MSSD_2.jpg" data-product-description="Sandales des soeurs.">
+        <div class="rounded-[1.7rem] bg-center bg-cover p-6" style="background-image: url('img/1117954-MSSD_2.jpg');">
+          <div class="flex min-h-64 items-end rounded-[1.5rem] border border-white/12 bg-white/10 p-4">
+            <h2 class="font-display text-4xl leading-none text-white">Sandales endurantes</h2>
+          </div>
+        </div>
+        <div class="px-2 pb-2 pt-5">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-extrabold text-white">Sandales endurantes</h3>
+            <span class="rounded-full bg-orange-400/18 px-3 py-1 text-sm font-extrabold text-orange-200">23$</span>
+          </div>
+          <p class="mt-4 text-sm leading-7 text-paper/68">Veste de caractere pour une fin de grille plus forte et plus mature dans l'univers.</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-paper/70">
+            <span class="rounded-full border border-white/10 px-3 py-2">statement</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">urbain</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">hommes</span>
+          </div>
+          <div class="mt-6 flex flex-wrap justify-center gap-3">
+            <button data-open-preview class="hidden rounded-2xl border border-orange-300/30 bg-orange-400/10 px-4 py-3 text-sm font-bold text-orange-200 transition hover:-translate-y-0.5 hover:bg-orange-400/16">Apercu</button>
+            <button data-order-now class="rounded-2xl bg-green-600 px-4 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-green-500">Commander</button>
+            <button data-add-to-cart class="rounded-2xl border border-white/12 bg-white/8 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Ajouter au panier</button>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="src/app.js"></script>
+</body>
+</html>

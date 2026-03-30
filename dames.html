@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UDBL PROD | Dames</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/output.css">
+</head>
+<body class="min-h-screen bg-ink text-paper antialiased">
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-ink/80 backdrop-blur-xl">
+    <div class="mx-auto flex w-[min(100%-1.5rem,76rem)] items-center justify-between gap-4 py-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <span class="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-coral to-violet text-sm font-extrabold text-white">UP</span>
+        <span>
+          <span class="block font-display text-2xl leading-none text-white">UDBL PROD</span>
+          <span class="mt-1 block text-[0.68rem] font-bold uppercase tracking-[0.35em] text-paper/60">section dames</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-6 text-sm text-paper/70 md:flex">
+        <a class="transition hover:text-white" href="index.html">Accueil</a>
+        <a class="text-white" href="dames.html">Dames</a>
+        <a class="transition hover:text-white" href="hommes.html">Hommes</a>
+        <a class="transition hover:text-white" href="panier.html">Panier</a>
+      </nav>
+      <a href="panier.html" class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/8 px-4 py-2 text-sm font-bold text-white">
+        <span>Panier</span>
+        <span data-cart-count class="grid min-h-7 min-w-7 place-items-center rounded-full bg-coral px-2 text-xs text-white">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="mx-auto w-[min(100%-1.5rem,76rem)] py-8 md:py-14">
+    <section class="rounded-[2rem] border border-white/10 bg-white/6 p-6 shadow-panel backdrop-blur-xl md:p-10">
+      <p class="text-xs font-extrabold uppercase tracking-[0.3em] text-coral-soft">dames</p>
+      <div class="mt-4 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+        <div>
+          <h1 class="font-display text-5xl leading-none text-white md:text-6xl">Selection dames</h1>
+          <!-- <p class="mt-4 max-w-2xl text-sm leading-7 text-paper/70 md:text-base">Une page dediee aux articles feminins avec une palette plus vive, des cartes plus fortes et un parcours direct vers WhatsApp.</p> -->
+        </div>
+        <a href="panier.html" class="inline-flex rounded-full bg-coral px-6 py-3 text-sm font-extrabold text-white shadow-[0_18px_40px_rgba(255,122,89,0.28)] transition hover:-translate-y-0.5 hover:bg-coral-strong">Voir le panier</a>
+      </div>
+    </section>
+
+    <section class="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      <article class="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 shadow-panel backdrop-blur-xl" data-product-name="Robe Sienna Luxe" data-product-price="48$" data-product-category="Dames" data-product-image="img/Robe.webp" data-product-description="Robe fluide pour look chic, sortie ou reception. Une piece qui donne de la presence a la vitrine.">
+        <div class="rounded-[1.7rem] bg-center bg-cover p-6" style="background-image: url('img/Robe.webp');">
+          <div class="flex min-h-64 items-end rounded-[1.5rem] border border-white/12 bg-white/10 p-4">
+            <!-- <div>
+              <img src="img/Robe.webp" alt="robe" class="">
+            </div> -->
+            <h2 class="font-display text-4xl leading-none text-white">Robe Sienna Luxe</h2>
+          </div>
+        </div>
+        <div class="px-2 pb-2 pt-5">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-extrabold text-white">Robe Sienna Luxe</h3>
+            <span class="rounded-full bg-coral/14 px-3 py-1 text-sm font-extrabold text-coral-soft">48$</span>
+          </div>
+          <p class="mt-4 text-sm leading-7 text-paper/68">Robe fluide pour look chic, sortie ou reception. Une piece qui donne de la presence a la vitrine.</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-paper/70">
+            <span class="rounded-full border border-white/10 px-3 py-2">nouveau</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">chic</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">dames</span>
+          </div>
+          <div class="mt-6 flex flex-wrap justify-center gap-3">
+            <button data-open-preview class=" hidden rounded-2xl border border-coral/30 bg-coral/12 px-4 py-3 text-sm font-bold text-coral-soft transition hover:-translate-y-0.5 hover:bg-coral/18">Apercu</button>
+            <button data-order-now class="rounded-2xl bg-green-600 px-4 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-green-500">Commander</button>
+            <button data-add-to-cart class="rounded-2xl border border-white/12 bg-white/8 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Ajouter au panier</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 shadow-panel backdrop-blur-xl" data-product-name="Sac Atelier Rose" data-product-price="36$" data-product-category="Dames" data-product-image="img/pm_11872_1252_1252854-r99rq10n03-whr.avif" data-product-description="Sac compact et affirme pour completer une tenue et enrichir les ventes d'accessoires.">
+        <div class="rounded-[1.7rem] bg-center bg-cover p-6" style="background-image: url('img/pm_11872_1252_1252854-r99rq10n03-whr.avif');">
+          <div class="flex min-h-64 items-end rounded-[1.5rem] border border-white/12 bg-white/10 p-4">
+            <h2 class="font-display text-4xl leading-none text-white">Sac Atelier Rose</h2>
+          </div>
+        </div>
+        <div class="px-2 pb-2 pt-5">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-extrabold text-white">Sac Atelier Rose</h3>
+            <span class="rounded-full bg-violet/18 px-3 py-1 text-sm font-extrabold text-violet-soft">36$</span>
+          </div>
+          <p class="mt-4 text-sm leading-7 text-paper/68">Sac compact et affirme pour completer une tenue et enrichir les ventes d'accessoires.</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-paper/70">
+            <span class="rounded-full border border-white/10 px-3 py-2">accessoire</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">style</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">dames</span>
+          </div>
+          <div class="mt-6 flex flex-wrap justify-center gap-3">
+            <button data-open-preview class="hidden rounded-2xl border border-violet/30 bg-violet/12 px-4 py-3 text-sm font-bold text-violet-soft transition hover:-translate-y-0.5 hover:bg-violet/18">Apercu</button>
+            <button data-order-now class="rounded-2xl bg-green-600 px-4 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-green-500">Commander</button>
+            <button data-add-to-cart class="rounded-2xl border border-white/12 bg-white/8 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Ajouter au panier</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 shadow-panel backdrop-blur-xl" data-product-name="Sandales Aurore" data-product-price="29$" data-product-category="Dames" data-product-image="img/shoes.webp" data-product-description="Sandales legeres et raffinees pour les looks de jour, vacances ou presentation plus decontractee.">
+        <div class="rounded-[1.7rem] bg-center bg-cover p-6" style="background-image: url('img/shoes.webp');">
+          <div class="flex min-h-64 items-end rounded-[1.5rem] border border-white/12 bg-white/10 p-4">
+            <h2 class="font-display text-4xl leading-none text-white">Sandales Aurore</h2>
+          </div>
+        </div>
+        <div class="px-2 pb-2 pt-5">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-extrabold text-white">Sandales Aurore</h3>
+            <span class="rounded-full bg-amber-400/18 px-3 py-1 text-sm font-extrabold text-amber-200">29$</span>
+          </div>
+          <p class="mt-4 text-sm leading-7 text-paper/68">Sandales legeres et raffinees pour les looks de jour, vacances ou presentation plus decontractee.</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-paper/70">
+            <span class="rounded-full border border-white/10 px-3 py-2">confort</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">weekend</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">dames</span>
+          </div>
+          <div class="mt-6 flex flex-wrap justify-center gap-3">
+            <button data-open-preview class="hidden rounded-2xl border border-amber-300/30 bg-amber-400/10 px-4 py-3 text-sm font-bold text-amber-200 transition hover:-translate-y-0.5 hover:bg-amber-400/16">Apercu</button>
+            <button data-order-now class="rounded-2xl bg-green-600 px-4 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-green-500">Commander</button>
+            <button data-add-to-cart class="rounded-2xl border border-white/12 bg-white/8 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Ajouter au panier</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 shadow-panel backdrop-blur-xl" data-product-name="Ensemble Celeste" data-product-price="57$" data-product-category="Dames" data-product-image="img/Robe.jpg" data-product-description="Ensemble deux pieces moderne pour une presentation plus premium dans l'univers dames.">
+        <div class="rounded-[1.7rem] bg-center bg-cover p-6" style="background-image: url('img/Robe.jpg');">
+          <div class="flex min-h-64 items-end rounded-[1.5rem] border border-white/12 bg-white/10 p-4">
+            <h2 class="font-display text-4xl leading-none text-white">Ensemble Celeste</h2>
+          </div>
+        </div>
+        <div class="px-2 pb-2 pt-5">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-extrabold text-white">Ensemble Celeste</h3>
+            <span class="rounded-full bg-sky-400/18 px-3 py-1 text-sm font-extrabold text-sky-200">57$</span>
+          </div>
+          <p class="mt-4 text-sm leading-7 text-paper/68">Ensemble deux pieces moderne pour une presentation plus premium dans l'univers dames.</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-paper/70">
+            <span class="rounded-full border border-white/10 px-3 py-2">premium</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">set</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">dames</span>
+          </div>
+          <div class="mt-6 flex flex-wrap justify-center gap-3">
+            <button data-open-preview class="hidden rounded-2xl border border-sky-300/30 bg-sky-400/10 px-4 py-3 text-sm font-bold text-sky-200 transition hover:-translate-y-0.5 hover:bg-sky-400/16">Apercu</button>
+            <button data-order-now class="rounded-2xl bg-green-600 px-4 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-green-500">Commander</button>
+            <button data-add-to-cart class="rounded-2xl border border-white/12 bg-white/8 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Ajouter au panier</button>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="src/app.js"></script>
+</body>
+</html>

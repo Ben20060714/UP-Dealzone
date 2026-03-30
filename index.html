@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UDBL PROD | Boutique</title>
+  <meta name="description" content="Boutique statique multipage avec sections dames, hommes et panier WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/output.css">
+</head>
+<body class="min-h-screen bg-ink text-paper antialiased selection:bg-coral selection:text-white">
+  <div class="absolute inset-x-0 top-0 -z-10 h-[34rem] bg-[radial-gradient(circle_at_top_left,_rgba(255,122,89,0.20),_transparent_30%),radial-gradient(circle_at_top_right,_rgba(109,91,255,0.18),_transparent_28%)]"></div>
+
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-ink/80 backdrop-blur-xl">
+    <div class="mx-auto flex w-[min(100%-1.5rem,76rem)] items-center justify-between gap-4 py-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <span class="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-coral to-violet text-sm font-extrabold text-white shadow-[0_18px_45px_rgba(255,122,89,0.28)]">UP</span>
+        <span class="block">
+          <span class="block font-display text-2xl leading-none tracking-wide text-white">UDBL PROD</span>
+          <span class="mt-1 block text-[0.68rem] font-bold uppercase tracking-[0.35em] text-paper/60">boutique online !</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-6 text-sm text-paper/70 md:flex">
+        <a class="transition hover:text-white" href="dames.html">Dames</a>
+        <a class="transition hover:text-white" href="hommes.html">Hommes</a>
+        <a class="transition hover:text-white" href="panier.html">Panier</a>
+      </nav>
+
+      <a id="cart-trigger" href="panier.html" class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/8 px-4 py-2 text-sm font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-white/12">
+        <span>Panier</span>
+        <span data-cart-count class="grid min-h-7 min-w-7 place-items-center rounded-full bg-coral px-2 text-xs text-white">0</span>
+      </a>
+    </div>
+  </header>
+
+  <div id="cart-drawer-overlay" class="pointer-events-none fixed inset-0 z-40 bg-ink/45 opacity-0 backdrop-blur-sm transition duration-300"></div>
+  <aside id="cart-drawer" class="pointer-events-none fixed right-0 top-0 z-50 flex h-screen w-full max-w-md translate-x-full flex-col border-l border-white/10 bg-white/10 opacity-0 shadow-[0_24px_80px_rgba(4,10,24,0.45)] backdrop-blur-2xl transition duration-300 ease-out">
+    <div class="flex items-center justify-between border-b border-white/10 px-5 py-5">
+      <div class="text-center justify-center">
+        <p class="text-[1.68rem] font-extrabold uppercase tracking-[0.3em] text-coral-soft">Mon panier</p>
+        <!-- <h2 class="mt-2 font-display text-4xl leading-none text-white"></h2> -->
+      </div>
+      <button id="cart-drawer-close" type="button" class="grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-white/8 text-xl font-bold text-white transition hover:bg-white/12">×</button>
+    </div>
+
+    <div class="flex-1 overflow-y-auto px-5 py-5">
+      <div class="rounded-[1.6rem] border border-white/10 bg-black/20 p-5">
+        <p class="text-sm text-paper/60">Total articles</p>
+        <p id="cart-drawer-total" class="mt-2 text-3xl font-extrabold text-white">0</p>
+        <p id="cart-drawer-preview" class="mt-4 text-sm leading-7 text-paper/68">salut, ces articles ()  m'interessent</p>
+      </div>
+
+      <div id="cart-drawer-empty" class="mt-5 rounded-[1.6rem] border border-dashed border-white/15 bg-black/20 p-5 text-center">
+        <p class="text-lg font-bold text-white">Le panier est vide.</p>
+        <p class="mt-2 text-sm leading-7 text-paper/62">Ajoutez des articles depuis les pages dediees, puis revenez ici pour une action rapide.</p>
+      </div>
+
+      <div id="cart-drawer-items" class="mt-5 grid gap-3"></div>
+    </div>
+
+    <div class="border-t border-white/10 px-5 py-5">
+      <div class="grid gap-3">
+        <button id="cart-drawer-send" type="button" class="rounded-2xl bg-green-600 px-5 py-4 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-green-500">Envoyer le panier sur WhatsApp</button>
+        <div class="grid grid-cols-2 gap-3">
+          <button id="cart-drawer-clear" type="button" class="rounded-2xl border border-white/12 bg-white/8 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Vider</button>
+          <a href="panier.html" class="inline-flex items-center justify-center rounded-2xl bg-coral px-4 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-coral-strong">Voir tout</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <section class="mx-auto grid w-[min(100%-1.5rem,76rem)] gap-6 py-8 md:py-14 lg:grid-cols-[1.2fr_0.8fr]">
+      <article class="overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-6 shadow-panel ring-1 ring-white/5 backdrop-blur-xl md:p-10">
+        <span class="inline-flex rounded-full border border-coral/30 bg-coral/12 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.3em] text-coral-soft">nouvelle direction visuelle</span>
+        <h1 class="mt-5 max-w-4xl font-display text-5xl leading-none text-white md:text-7xl">
+          Une boutique plus nette, plus forte, en vraies pages.
+        </h1>
+        <p class="mt-5 max-w-2xl text-base leading-8 text-paper/72 md:text-lg">
+          Cette version abandonne le CSS classique pour TailwindCSS, change completement la palette,
+          et separe la navigation en plusieurs pages: accueil, dames, hommes et panier.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="dames.html" class="inline-flex items-center rounded-full bg-coral px-6 py-3 text-sm font-extrabold text-white shadow-[0_18px_40px_rgba(255,122,89,0.28)] transition hover:-translate-y-0.5 hover:bg-coral-strong">Voir dames</a>
+          <a href="hommes.html" class="inline-flex items-center rounded-full border border-white/12 bg-white/8 px-6 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Voir hommes</a>
+        </div>
+
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          <div class="rounded-3xl border border-white/10 bg-black/20 p-4">
+            <p class="text-3xl font-extrabold text-white">3+</p>
+            <p class="mt-2 text-sm leading-6 text-paper/62">Pages pour mieux presenter la boutique et eviter l'effet bloc unique.</p>
+          </div>
+          <div class="rounded-3xl border border-white/10 bg-black/20 p-4">
+            <p class="text-3xl font-extrabold text-white">Tailwind</p>
+            <p class="mt-2 text-sm leading-6 text-paper/62">Tout le rendu passe maintenant par des classes Tailwind et un theme dedie.</p>
+          </div>
+          <div class="rounded-3xl border border-white/10 bg-black/20 p-4">
+            <p class="text-3xl font-extrabold text-white">WhatsApp</p>
+            <p class="mt-2 text-sm leading-6 text-paper/62">Produit seul ou panier complet, le message est genere automatiquement.</p>
+          </div>
+        </div>
+      </article>
+
+      <aside class="grid gap-6">
+        <article class="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-6 shadow-panel backdrop-blur-xl">
+          <p class="text-xs font-extrabold uppercase tracking-[0.3em] text-mint">univers dames</p>
+          <h2 class="mt-4 font-display text-4xl leading-none text-white">Des pieces plus mode, plus souples, plus lumineuses.</h2>
+          <p class="mt-4 text-sm leading-7 text-paper/70">Robes, sacs, ensembles et accessoires presentes dans une page dediee avec commandes directes.</p>
+          <a href="dames.html" class="mt-6 inline-flex rounded-full border border-white/10 bg-white/8 px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Explorer dames</a>
+        </article>
+
+        <article class="rounded-[2rem] border border-white/10 bg-gradient-to-br from-violet/18 to-transparent p-6 shadow-panel backdrop-blur-xl">
+          <p class="text-xs font-extrabold uppercase tracking-[0.3em] text-violet-soft">univers hommes</p>
+          <h2 class="mt-4 font-display text-4xl leading-none text-white">Des essentiels plus francs, plus urbains, plus structures.</h2>
+          <p class="mt-4 text-sm leading-7 text-paper/70">Chemises, montres, sneakers et vestes avec ajout au panier conserve entre les pages.</p>
+          <a href="hommes.html" class="mt-6 inline-flex rounded-full border border-white/10 bg-white/8 px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Explorer hommes</a>
+        </article>
+      </aside>
+    </section>
+
+    <section class="mx-auto w-[min(100%-1.5rem,76rem)] pb-16 md:pb-24">
+      <div class="grid gap-6 rounded-[2.2rem] border border-white/10 bg-white/6 p-6 shadow-panel backdrop-blur-xl md:grid-cols-[1.05fr_0.95fr] md:p-8">
+        <div>
+          <p class="text-xs font-extrabold uppercase tracking-[0.3em] text-coral-soft">commande rapide</p>
+          <h2 class="mt-4 font-display text-4xl leading-none text-white md:text-5xl">Le panier reste disponible sur tout le site.</h2>
+          <p class="mt-5 max-w-2xl text-sm leading-7 text-paper/70 md:text-base">
+            Chaque fiche produit ouvre WhatsApp avec le nom de l'article. Si le client ajoute plusieurs articles,
+            la page panier prepare ensuite un message complet au format demande:
+            <span class="font-bold text-white">salut, ces articles (noms des articles)  m'interessent</span>.
+          </p>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-3">
+          <div class="rounded-3xl border border-white/10 bg-black/20 p-5">
+            <p class="text-sm font-extrabold text-white">1. Ajouter</p>
+            <p class="mt-3 text-sm leading-6 text-paper/62">Depuis la page dames ou hommes.</p>
+          </div>
+          <div class="rounded-3xl border border-white/10 bg-black/20 p-5">
+            <p class="text-sm font-extrabold text-white">2. Verifier</p>
+            <p class="mt-3 text-sm leading-6 text-paper/62">Le panier garde les articles via localStorage.</p>
+          </div>
+          <div class="rounded-3xl border border-white/10 bg-black/20 p-5">
+            <p class="text-sm font-extrabold text-white">3. Envoyer</p>
+            <p class="mt-3 text-sm leading-6 text-paper/62">WhatsApp s'ouvre avec le numero deja cible.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="src/app.js"></script>
+  <script>
+    const cartDrawerTrigger = document.getElementById("cart-trigger");
+    const cartDrawer = document.getElementById("cart-drawer");
+    const cartDrawerOverlay = document.getElementById("cart-drawer-overlay");
+    const cartDrawerClose = document.getElementById("cart-drawer-close");
+    const cartDrawerItems = document.getElementById("cart-drawer-items");
+    const cartDrawerEmpty = document.getElementById("cart-drawer-empty");
+    const cartDrawerTotal = document.getElementById("cart-drawer-total");
+    const cartDrawerPreview = document.getElementById("cart-drawer-preview");
+    const cartDrawerSend = document.getElementById("cart-drawer-send");
+    const cartDrawerClear = document.getElementById("cart-drawer-clear");
+    const drawerStorageKey = "udbl-prod-cart";
+    const drawerWhatsappNumber = "243820433981";
+
+    function readDrawerCart() {
+      try {
+        const saved = localStorage.getItem(drawerStorageKey);
+        return saved ? JSON.parse(saved) : [];
+      } catch {
+        return [];
+      }
+    }
+
+    function writeDrawerCart(cart) {
+      localStorage.setItem(drawerStorageKey, JSON.stringify(cart));
+      if (typeof updateCartCounters === "function") updateCartCounters();
+      renderDrawerCart();
+    }
+
+    function flattenDrawerNames(cart) {
+      return cart.flatMap((item) => Array.from({ length: item.quantity }, () => item.name));
+    }
+
+    function buildDrawerMessage(names) {
+      return `salut, ces articles (${names.join(", ")})  m'interessent`;
+    }
+
+    function openDrawerWhatsapp(names) {
+      const text = encodeURIComponent(buildDrawerMessage(names));
+      window.open(`https://wa.me/${drawerWhatsappNumber}?text=${text}`, "_blank", "noopener,noreferrer");
+    }
+
+    function openCartDrawer() {
+      renderDrawerCart();
+      cartDrawer.classList.remove("translate-x-full", "opacity-0", "pointer-events-none");
+      cartDrawerOverlay.classList.remove("opacity-0", "pointer-events-none");
+      document.body.classList.add("overflow-hidden");
+    }
+
+    function closeCartDrawer() {
+      cartDrawer.classList.add("translate-x-full", "opacity-0", "pointer-events-none");
+      cartDrawerOverlay.classList.add("opacity-0", "pointer-events-none");
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    function renderDrawerCart() {
+      const cart = readDrawerCart();
+      const names = flattenDrawerNames(cart);
+      const total = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+      cartDrawerItems.innerHTML = "";
+      cartDrawerTotal.textContent = String(total);
+      cartDrawerPreview.textContent = buildDrawerMessage(names);
+
+      if (!cart.length) {
+        cartDrawerEmpty.classList.remove("hidden");
+        cartDrawerSend.disabled = true;
+        cartDrawerSend.classList.add("opacity-50", "cursor-not-allowed");
+        return;
+      }
+
+      cartDrawerEmpty.classList.add("hidden");
+      cartDrawerSend.disabled = false;
+      cartDrawerSend.classList.remove("opacity-50", "cursor-not-allowed");
+
+      cart.forEach((item) => {
+        const row = document.createElement("article");
+        row.className = "grid gap-3 rounded-[1.5rem] border border-white/10 bg-black/20 p-4";
+        row.innerHTML = `
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <p class="text-xs font-extrabold uppercase tracking-[0.2em] text-paper/45">${item.category}</p>
+              <h3 class="mt-1 text-base font-extrabold text-white">${item.name}</h3>
+              <p class="mt-2 text-sm text-paper/62">${item.price} · ${item.quantity} article(s)</p>
+            </div>
+            <button data-action="remove" data-name="${item.name}" type="button" class="rounded-full bg-coral/15 px-3 py-2 text-xs font-bold text-coral-soft">Retirer</button>
+          </div>
+          <div class="flex items-center gap-2">
+            <button data-action="decrease" data-name="${item.name}" type="button" class="grid h-9 w-9 place-items-center rounded-full border border-white/12 bg-white/8 text-base font-extrabold text-white">-</button>
+            <span class="min-w-8 text-center text-base font-extrabold text-white">${item.quantity}</span>
+            <button data-action="increase" data-name="${item.name}" type="button" class="grid h-9 w-9 place-items-center rounded-full border border-white/12 bg-white/8 text-base font-extrabold text-white">+</button>
+          </div>
+        `;
+        cartDrawerItems.appendChild(row);
+      });
+    }
+
+    cartDrawerTrigger.addEventListener("click", (event) => {
+      event.preventDefault();
+      openCartDrawer();
+    });
+
+    cartDrawerClose.addEventListener("click", closeCartDrawer);
+    cartDrawerOverlay.addEventListener("click", closeCartDrawer);
+
+    cartDrawerItems.addEventListener("click", (event) => {
+      const button = event.target.closest("button");
+      if (!button) return;
+
+      const cart = readDrawerCart();
+      const item = cart.find((entry) => entry.name === button.dataset.name);
+      if (!item) return;
+
+      if (button.dataset.action === "increase") item.quantity += 1;
+      if (button.dataset.action === "decrease") item.quantity -= 1;
+      if (button.dataset.action === "remove") item.quantity = 0;
+
+      writeDrawerCart(cart.filter((entry) => entry.quantity > 0));
+    });
+
+    cartDrawerSend.addEventListener("click", () => {
+      const names = flattenDrawerNames(readDrawerCart());
+      if (names.length) openDrawerWhatsapp(names);
+    });
+
+    cartDrawerClear.addEventListener("click", () => {
+      writeDrawerCart([]);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeCartDrawer();
+    });
+  </script>
+</body>
+</html>

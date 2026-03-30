@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@source "../index.html";
+@source "../dames.html";
+@source "../hommes.html";
+@source "../panier.html";
+@source "./app.js";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+
+  --color-ink: #09111f;
+  --color-midnight: #13233d;
+  --color-paper: #edf2ff;
+  --color-coral: #ff7a59;
+  --color-coral-strong: #ff5d35;
+  --color-coral-soft: #ffb39f;
+  --color-violet: #6d5bff;
+  --color-violet-strong: #5844ff;
+  --color-violet-soft: #c9c2ff;
+  --color-mint: #73e0b2;
+
+  --shadow-panel: 0 26px 80px rgba(3, 9, 20, 0.34);
+  --shadow-soft: 0 20px 50px rgba(8, 17, 31, 0.24);
+}
