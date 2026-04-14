@@ -1,0 +1,11 @@
+bg-gradient-to-br from-coral via-coral-soft to-violet/60
+bg-gradient-to-br from-fuchsia-500/80 via-violet/70 to-midnight
+bg-gradient-to-br from-amber-500/90 via-coral/75 to-midnight
+bg-gradient-to-br from-sky-500/75 via-violet/65 to-midnight
+
+
+bg-gradient-to-br from-mint/70 via-emerald-500/45 to-midnight
+
+
+
+356824438320114 : IMEI tecno pop 10 jess
