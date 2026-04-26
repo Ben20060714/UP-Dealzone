@@ -29,13 +29,18 @@ function buildMessage(names) {
   return `salut, ces articles (${names.join(", ")})  m'interessent`;
 }
 
+function normalizeWhatsAppNumber(phone) {
+  return String(phone ?? "").replace(/\D+/g, "");
+}
+
 function flattenNames(cart) {
   return cart.flatMap((item) => Array.from({ length: item.quantity }, () => item.name));
 }
 
-function openWhatsApp(names) {
+function openWhatsApp(phone, names) {
+  const destination = normalizeWhatsAppNumber(phone) || WHATSAPP_NUMBER;
   const text = encodeURIComponent(buildMessage(names));
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank", "noopener,noreferrer");
+  window.open(`https://wa.me/${destination}?text=${text}`, "_blank", "noopener,noreferrer");
 }
 
 function updateCartCounters() {
@@ -211,6 +216,7 @@ function bindPreviewModal() {
         category: card.dataset.productCategory,
         image: card.dataset.productImage,
         description: card.dataset.productDescription,
+        phone: card.dataset.productPhone,
         tags: collectCardTags(card)
       });
     });
@@ -230,7 +236,7 @@ function bindPreviewModal() {
 
   orderButton?.addEventListener("click", () => {
     if (!activeProduct) return;
-    openWhatsApp([activeProduct.name]);
+    openWhatsApp(activeProduct.phone, [activeProduct.name]);
   });
 
   cartButton?.addEventListener("click", () => {
@@ -253,6 +259,7 @@ function bindProductCards() {
       category: card.dataset.productCategory,
       image: card.dataset.productImage,
       description: card.dataset.productDescription,
+      phone: card.dataset.productPhone,
       tags: collectCardTags(card)
     };
 
@@ -261,7 +268,7 @@ function bindProductCards() {
     });
 
     card.querySelector("[data-order-now]")?.addEventListener("click", () => {
-      openWhatsApp([product.name]);
+      openWhatsApp(product.phone, [product.name]);
     });
   });
 }
