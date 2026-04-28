@@ -372,4 +372,32 @@ function renderCartPage() {
 updateCartCounters();
 bindProductCards();
 bindPreviewModal();
+bindMobileMenu();
 renderCartPage();
+
+function bindMobileMenu() {
+  const menuButton = document.querySelector("[data-mobile-menu-button]");
+  const mobileMenu = document.getElementById("mobile-menu");
+  if (!menuButton || !mobileMenu) return;
+
+  const closeMobileMenu = () => {
+    mobileMenu.classList.add("hidden");
+    menuButton.setAttribute("aria-expanded", "false");
+  };
+
+  menuButton.addEventListener("click", () => {
+    const isHidden = mobileMenu.classList.toggle("hidden");
+    menuButton.setAttribute("aria-expanded", String(!isHidden));
+  });
+
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMobileMenu);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (mobileMenu.classList.contains("hidden")) return;
+    if (!(event.target instanceof HTMLElement)) return;
+    if (event.target.closest("#mobile-menu") || event.target.closest("[data-mobile-menu-button]")) return;
+    closeMobileMenu();
+  });
+}

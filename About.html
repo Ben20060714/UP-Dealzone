@@ -28,12 +28,37 @@
         <a class="transition hover:text-white" href="panier.html">Panier</a>
         <a class="text-white" href="About.html">À propos</a>
       </nav>
-
-      <a href="panier.html" class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/8 px-4 py-2 text-sm font-bold text-white">
+      <button
+        type="button"
+        data-mobile-menu-button
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Ouvrir le menu"
+        class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-slate-950 text-white transition hover:bg-slate-800 md:hidden"
+      >
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 5H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M3 10H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M3 15H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <a href="panier.html" class="hidden md:inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/8 px-4 py-2 text-sm font-bold text-white">
         <span>Panier</span>
         <span data-cart-count class="grid min-h-7 min-w-7 place-items-center rounded-full bg-coral px-2 text-xs text-white">0</span>
       </a>
     </div>
+    <nav id="mobile-menu" class="absolute inset-x-0 top-full z-30 hidden border-t border-white/10 bg-slate-950 px-4 py-4 backdrop-blur-xl md:hidden">
+      <div class="flex flex-col gap-3">
+        <a class="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800/80" href="index.html">Accueil</a>
+        <a class="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800/80" href="dames.html">Dames</a>
+        <a class="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800/80" href="hommes.html">Hommes</a>
+        <a class="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800/80" href="panier.html">
+          <span>Panier</span>
+          <span data-cart-count class="grid min-h-7 min-w-7 place-items-center rounded-full bg-coral px-2 text-xs text-white">0</span>
+        </a>
+        <a class="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800/80" href="About.html">À propos</a>
+      </div>
+    </nav>
   </header>
 
   <main class="mx-auto w-[min(100%-1.5rem,76rem)] py-8 md:py-14">
