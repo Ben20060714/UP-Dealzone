@@ -85,7 +85,7 @@ function ensurePreviewModal() {
   modal.className = "fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/80 px-4 py-8 backdrop-blur-xl";
   modal.innerHTML = `
     <div class="absolute inset-0" data-close-modal></div>
-    <section role="dialog" aria-modal="true" class="relative z-10 flex w-auto max-w-6xl overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/95 shadow-panel lg:grid-cols-[1.05fr_0.95fr]">
+    <section role="dialog" aria-modal="true" class="relative z-10 w-auto max-w-6xl overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/95 shadow-panel lg:grid-cols-[1.05fr_0.95fr]">
       <div class="relative min-h-[26rem] overflow-hidden bg-slate-900">
         <img data-modal-image src="" alt="" class="h-full w-full rounded-2xl object-cover">
         <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent"></div>
@@ -277,7 +277,7 @@ function renderCartImage(item) {
   if (!item.image) {
     return `
       <div class="grid h-24 w-24 place-items-center rounded-[1.4rem] border border-white/10 bg-white/6 text-xs font-extrabold uppercase tracking-[0.2em] text-paper/45">
-        UDBL
+        BARGAIN ZONE
       </div>
     `;
   }
