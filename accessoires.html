@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BZ | Accessoires</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/output.css">
+</head>
+<body class="min-h-screen bg-ink text-paper antialiased">
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-ink/80 backdrop-blur-xl">
+    <div class="mx-auto flex w-[min(100%-1.5rem,76rem)] items-center justify-between gap-4 py-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <span class="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-coral to-violet text-sm font-extrabold text-white">BZ</span>
+        <span>
+          <span class="block font-display text-2xl leading-none text-white">BARGAIN ZONE</span>
+          <span class="mt-1 block text-[0.68rem] font-bold uppercase tracking-[0.35em] text-paper/60">section accessoires</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-6 text-sm text-paper/70 md:flex">
+        <a class="transition hover:text-white" href="index.html">Accueil</a>
+        <a class="transition hover:text-white" href="dames.html">Dames</a>
+        <a class="transition hover:text-white" href="hommes.html">Hommes</a>
+        <a class="text-white" href="accessoires.html">Accessoires</a>
+        <a class="transition hover:text-white" href="panier.html">Panier</a>
+        <a href="About.html" class="transition hover:text-white">À propos</a>
+      </nav>
+      <button
+        type="button"
+        data-mobile-menu-button
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Ouvrir le menu"
+        class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-slate-950 text-white transition hover:bg-slate-800 md:hidden"
+      >
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 5H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M3 10H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M3 15H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <a href="panier.html" class="hidden md:inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/8 px-4 py-2 text-sm font-bold text-white">
+        <span>Panier</span>
+        <span data-cart-count class="grid min-h-7 min-w-7 place-items-center rounded-full bg-coral px-2 text-xs text-white">0</span>
+      </a>
+    </div>
+    <nav id="mobile-menu" class="absolute inset-x-0 top-full z-30 hidden border-t border-white/10 bg-slate-950 px-4 py-4 backdrop-blur-xl md:hidden">
+      <div class="flex flex-col gap-3">
+        <a class="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800/80" href="index.html">Accueil</a>
+        <a class="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800/80" href="dames.html">Dames</a>
+        <a class="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800/80" href="hommes.html">Hommes</a>
+        <a class="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800/80" href="accessoires.html">Accessoires</a>
+        <a class="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800/80" href="panier.html">
+          <span>Panier</span>
+          <span data-cart-count class="grid min-h-7 min-w-7 place-items-center rounded-full bg-coral px-2 text-xs text-white">0</span>
+        </a>
+        <a class="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800/80" href="About.html">À propos</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mx-auto w-[min(100%-1.5rem,76rem)] py-8 md:py-14">
+    <section class="rounded-[2rem] border border-white/10 bg-white/6 p-6 shadow-panel backdrop-blur-xl md:p-10">
+      <p class="text-xs font-extrabold uppercase tracking-[0.3em] text-coral-soft">accessoires</p>
+      <div class="mt-4 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+        <div>
+          <h1 class="font-display text-5xl leading-none text-white md:text-6xl">Accessoires tendance</h1>
+          <p class="mt-4 max-w-2xl text-sm leading-7 text-paper/70 md:text-base">Découvrez une sélection d'accessoires utiles et élégants, compatibles avec les collections dames et hommes.</p>
+        </div>
+        <a href="panier.html" class="inline-flex rounded-full bg-coral px-6 py-3 text-sm font-extrabold text-white shadow-[0_18px_40px_rgba(255,122,89,0.28)] transition hover:-translate-y-0.5 hover:bg-coral-strong">Voir le panier</a>
+      </div>
+    </section>
+
+    <section class="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      <article class="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 shadow-panel backdrop-blur-xl" data-product-name="Montre connectée" data-product-price="35$" data-product-category="Accessoires" data-product-image="img/Astride/Autres/Smartwatch2.jpeg" data-product-description="Montre connectée avec appel Bluetooth, notifications et autonomie longue durée." data-product-phone="+243978896442">
+        <div class="rounded-[1.7rem] bg-center bg-cover p-6" style="background-image: url('img/Astride/Autres/Smartwatch2.jpeg');">
+          <div class="flex min-h-64 items-end rounded-[1.5rem] border border-white/12 bg-white/10 p-4"></div>
+        </div>
+        <div class="px-2 pb-2 pt-5">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-extrabold text-white">Montre connectée</h3>
+            <span class="rounded-full bg-sky-400/18 px-3 py-1 text-sm font-extrabold text-sky-200">35$</span>
+          </div>
+          <p class="mt-4 text-sm leading-7 text-paper/68">Smartwatch pratique pour sport, appels et notifications. 10Pcs = 320$.</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-paper/70">
+            <span class="rounded-full border border-white/10 px-3 py-2">Disponibilité : Chine</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">tech</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">accessoires</span>
+          </div>
+          <div class="mt-6 flex flex-wrap justify-center gap-3">
+            <button data-order-now class="rounded-2xl bg-green-600 px-4 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-green-500">Commander</button>
+            <button data-add-to-cart class="rounded-2xl border border-white/12 bg-white/8 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Ajouter au panier</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 shadow-panel backdrop-blur-xl" data-product-name="Ceinture en cuir" data-product-price="18$" data-product-category="Accessoires" data-product-image="img/Astride/Autres/Lights wire.jpeg" data-product-description="Ceinture en cuir synthétique avec boucle élégante pour tous les styles." data-product-phone="+243978896442">
+        <div class="rounded-[1.7rem] bg-center bg-cover p-6" style="background-image: url('img/Astride/Autres/Lights wire.jpeg');">
+          <div class="flex min-h-64 items-end rounded-[1.5rem] border border-white/12 bg-white/10 p-4"></div>
+        </div>
+        <div class="px-2 pb-2 pt-5">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-extrabold text-white">Ceinture en cuir</h3>
+            <span class="rounded-full bg-amber-400/18 px-3 py-1 text-sm font-extrabold text-amber-200">18$</span>
+          </div>
+          <p class="mt-4 text-sm leading-7 text-paper/68">Accessoire passe-partout, idéal pour les tenues chics ou urbaines.</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-paper/70">
+            <span class="rounded-full border border-white/10 px-3 py-2">Disponibilité : Europe</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">mode</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">accessoires</span>
+          </div>
+          <div class="mt-6 flex flex-wrap justify-center gap-3">
+            <button data-order-now class="rounded-2xl bg-green-600 px-4 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-green-500">Commander</button>
+            <button data-add-to-cart class="rounded-2xl border border-white/12 bg-white/8 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Ajouter au panier</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 shadow-panel backdrop-blur-xl" data-product-name="Lunettes de soleil" data-product-price="22$" data-product-category="Accessoires" data-product-image="img/Astride/Autres/WhatsApp Image 2026-04-26 at 9.41.43 PM.jpeg" data-product-description="Paire de lunettes de soleil avec monture tendance et protection UV renforcée." data-product-phone="+243978896442">
+        <div class="rounded-[1.7rem] bg-center bg-cover p-6" style="background-image: url('img/Astride/Autres/WhatsApp Image 2026-04-26 at 9.41.43 PM.jpeg');">
+          <div class="flex min-h-64 items-end rounded-[1.5rem] border border-white/12 bg-white/10 p-4"></div>
+        </div>
+        <div class="px-2 pb-2 pt-5">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-extrabold text-white">Lunettes de soleil</h3>
+            <span class="rounded-full bg-violet/18 px-3 py-1 text-sm font-extrabold text-violet-soft">22$</span>
+          </div>
+          <p class="mt-4 text-sm leading-7 text-paper/68">Style rétro avec verres teintés, parfaites pour compléter une tenue d'été.</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-paper/70">
+            <span class="rounded-full border border-white/10 px-3 py-2">Disponibilité : Asie</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">été</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">accessoires</span>
+          </div>
+          <div class="mt-6 flex flex-wrap justify-center gap-3">
+            <button data-order-now class="rounded-2xl bg-green-600 px-4 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-green-500">Commander</button>
+            <button data-add-to-cart class="rounded-2xl border border-white/12 bg-white/8 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Ajouter au panier</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 shadow-panel backdrop-blur-xl" data-product-name="Pochette chic" data-product-price="15$" data-product-category="Accessoires" data-product-image="img/Astride/Autres/WhatsApp Image 2026-04-26 at 9.41.41 PM.jpeg" data-product-description="Pochette de soirée élégante avec bandoulière amovible et finition satinée." data-product-phone="+243978896442">
+        <div class="rounded-[1.7rem] bg-center bg-cover p-6" style="background-image: url('img/Astride/Autres/WhatsApp Image 2026-04-26 at 9.41.41 PM.jpeg');">
+          <div class="flex min-h-64 items-end rounded-[1.5rem] border border-white/12 bg-white/10 p-4"></div>
+        </div>
+        <div class="px-2 pb-2 pt-5">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-extrabold text-white">Pochette chic</h3>
+            <span class="rounded-full bg-coral/14 px-3 py-1 text-sm font-extrabold text-coral-soft">15$</span>
+          </div>
+          <p class="mt-4 text-sm leading-7 text-paper/68">Idéal pour une sortie, un mariage ou un dîner élégant.</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-paper/70">
+            <span class="rounded-full border border-white/10 px-3 py-2">Disponibilité : Chine</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">soirée</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">accessoires</span>
+          </div>
+          <div class="mt-6 flex flex-wrap justify-center gap-3">
+            <button data-order-now class="rounded-2xl bg-green-600 px-4 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-green-500">Commander</button>
+            <button data-add-to-cart class="rounded-2xl border border-white/12 bg-white/8 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Ajouter au panier</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 shadow-panel backdrop-blur-xl" data-product-name="Chapeau tendance" data-product-price="14$" data-product-category="Accessoires" data-product-image="img/Astride/Autres/WhatsApp Image 2026-04-26 at 9.41.40 PM.jpeg" data-product-description="Chapeau en paille légère, parfait pour l'été et les looks streetwear." data-product-phone="+243978896442">
+        <div class="rounded-[1.7rem] bg-center bg-cover p-6" style="background-image: url('img/Astride/Autres/WhatsApp Image 2026-04-26 at 9.41.40 PM.jpeg');">
+          <div class="flex min-h-64 items-end rounded-[1.5rem] border border-white/12 bg-white/10 p-4"></div>
+        </div>
+        <div class="px-2 pb-2 pt-5">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-extrabold text-white">Chapeau tendance</h3>
+            <span class="rounded-full bg-coral/14 px-3 py-1 text-sm font-extrabold text-coral-soft">14$</span>
+          </div>
+          <p class="mt-4 text-sm leading-7 text-paper/68">Chapeau léger et stylé, idéal pour protéger du soleil avec élégance.</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-paper/70">
+            <span class="rounded-full border border-white/10 px-3 py-2">Disponibilité : Zambie</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">été</span>
+            <span class="rounded-full border border-white/10 px-3 py-2">accessoires</span>
+          </div>
+          <div class="mt-6 flex flex-wrap justify-center gap-3">
+            <button data-order-now class="rounded-2xl bg-green-600 px-4 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-green-500">Commander</button>
+            <button data-add-to-cart class="rounded-2xl border border-white/12 bg-white/8 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Ajouter au panier</button>
+          </div>
+        </div>
+      </article>
+      <!-- Copie ce bloc dans la page correspondante -->
+        <article class="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 shadow-panel backdrop-blur-xl" data-product-name="Montre ZK" data-product-price="44" data-product-category="Accessoires" data-product-image="img/astride/Sandales.jpeg" data-product-description="Mapapa" data-product-phone="+243820433981">
+        <div class="rounded-[1.7rem] bg-center bg-cover p-6" style="background-image: url('img/Astride/Sandales.jpeg');">
+            <div class="flex min-h-64 items-end rounded-[1.5rem] border border-white/12 bg-white/10 p-4"></div>
+        </div>
+        <div class="px-2 pb-2 pt-5">
+            <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-extrabold text-white">Montre ZK</h3>
+            <span class="rounded-full bg-coral/14 px-3 py-1 text-sm font-extrabold text-coral-soft">44</span>
+            </div>
+            <p class="mt-4 text-sm leading-7 text-paper/68">Mapapa</p>
+            <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-paper/70"><span class="rounded-full border border-white/10 px-3 py-2 text-xs font-bold text-paper/70">sandale</span><span class="rounded-full border border-white/10 px-3 py-2 text-xs font-bold text-paper/70">montre</span><span class="rounded-full border border-white/10 px-3 py-2 text-xs font-bold text-paper/70">tic</span></div>
+            <div class="mt-6 flex flex-wrap justify-center gap-3">
+            <button data-order-now class="rounded-2xl bg-green-600 px-4 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-green-500">Commander</button>
+            <button data-add-to-cart class="rounded-2xl border border-white/12 bg-white/8 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Ajouter au panier</button>
+            </div>
+        </div>
+        </article>
+    </section>
+  </main>
+
+  <script src="src/app.js"></script>
+</body>
+</html>

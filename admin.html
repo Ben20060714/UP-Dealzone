@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BZ | Créateur de produit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/output.css">
+</head>
+<body class="min-h-screen bg-ink text-paper antialiased">
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-ink/80 backdrop-blur-xl">
+    <div class="mx-auto flex w-[min(100%-1.5rem,76rem)] items-center justify-between gap-4 py-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <span class="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-coral to-violet text-sm font-extrabold text-white">BZ</span>
+        <span>
+          <span class="block font-display text-2xl leading-none text-white">BARGAIN ZONE</span>
+          <span class="mt-1 block text-[0.68rem] font-bold uppercase tracking-[0.35em] text-paper/60">Editeur de produit privé</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-6 text-sm text-paper/70 md:flex">
+        <a class="transition hover:text-white" href="index.html">Accueil</a>
+        <a class="transition hover:text-white" href="dames.html">Dames</a>
+        <a class="transition hover:text-white" href="hommes.html">Hommes</a>
+        <a class="transition hover:text-white" href="accessoires.html">Accessoires</a>
+        <a class="transition hover:text-white" href="panier.html">Panier</a>
+        <a href="About.html" class="transition hover:text-white">À propos</a>
+      </nav>
+      <button
+        type="button"
+        data-mobile-menu-button
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Ouvrir le menu"
+        class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-slate-950 text-white transition hover:bg-slate-800 md:hidden"
+      >
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 5H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M3 10H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M3 15H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <a href="panier.html" class="hidden md:inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/8 px-4 py-2 text-sm font-bold text-white">
+        <span>Panier</span>
+        <span data-cart-count class="grid min-h-7 min-w-7 place-items-center rounded-full bg-coral px-2 text-xs text-white">0</span>
+      </a>
+    </div>
+    <nav id="mobile-menu" class="absolute inset-x-0 top-full z-30 hidden border-t border-white/10 bg-slate-950 px-4 py-4 backdrop-blur-xl md:hidden">
+      <div class="flex flex-col gap-3">
+        <a class="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800/80" href="index.html">Accueil</a>
+        <a class="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800/80" href="dames.html">Dames</a>
+        <a class="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800/80" href="hommes.html">Hommes</a>
+        <a class="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800/80" href="accessoires.html">Accessoires</a>
+        <a class="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800/80" href="panier.html">
+          <span>Panier</span>
+          <span data-cart-count class="grid min-h-7 min-w-7 place-items-center rounded-full bg-coral px-2 text-xs text-white">0</span>
+        </a>
+        <a class="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm font-bold text-white transition hover:bg-slate-800/80" href="About.html">À propos</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mx-auto w-[min(100%-1.5rem,76rem)] py-8 md:py-14">
+    <section class="rounded-[2rem] border border-white/10 bg-white/6 p-6 shadow-panel backdrop-blur-xl md:p-10">
+      <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p class="text-xs font-extrabold uppercase tracking-[0.3em] text-coral-soft">outil privé</p>
+          <h1 class="mt-3 font-display text-5xl leading-none text-white md:text-6xl">Créer un produit</h1>
+          <p class="mt-4 max-w-3xl text-sm leading-7 text-paper/70">Génère rapidement un produit à copier/coller vers Dames, Hommes ou Accessoires sans toucher au code existant.</p>
+        </div>
+        <a href="accessoires.html" class="inline-flex rounded-full bg-coral px-6 py-3 text-sm font-extrabold text-white shadow-[0_18px_40px_rgba(255,122,89,0.28)] transition hover:-translate-y-0.5 hover:bg-coral-strong">Voir accessoires</a>
+      </div>
+    </section>
+
+    <section class="mt-8 flex gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+      <form id="product-generator-form" class="rounded-[2rem] border border-white/10 bg-white/6 p-6 shadow-panel backdrop-blur-xl space-y-6">
+        <div class="grid gap-4 md:grid-cols-2">
+          <label class="space-y-2 text-sm text-paper/70">
+            <span class="font-bold text-white">Section</span>
+            <select id="product-category" class="w-full rounded-3xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none focus:border-coral focus:ring-2 focus:ring-coral/20">
+              <option value="Dames">Dames</option>
+              <option value="Hommes">Hommes</option>
+              <option value="Accessoires">Accessoires</option>
+            </select>
+          </label>
+          <label class="space-y-2 text-sm text-paper/70">
+            <span class="font-bold text-white">Prix</span>
+            <input id="product-price" type="text" placeholder="12$" class="w-full rounded-3xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none focus:border-coral focus:ring-2 focus:ring-coral/20" />
+          </label>
+        </div>
+
+        <label class="space-y-2 text-sm text-paper/70">
+          <span class="font-bold text-white">Nom du produit</span>
+          <input id="product-name" type="text" placeholder="Ex: Pochette chic" class="w-full rounded-3xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none focus:border-coral focus:ring-2 focus:ring-coral/20" />
+        </label>
+
+        <label class="space-y-2 text-sm text-paper/70">
+          <span class="font-bold text-white">URL de l'image</span>
+          <input id="product-image" type="text" placeholder="img/Astride/Autres/Pochette.jpg" class="w-full rounded-3xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none focus:border-coral focus:ring-2 focus:ring-coral/20" />
+        </label>
+
+        <label class="space-y-2 text-sm text-paper/70">
+          <span class="font-bold text-white">Téléphone WhatsApp</span>
+          <input id="product-phone" type="text" placeholder="+243978896442" class="w-full rounded-3xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none focus:border-coral focus:ring-2 focus:ring-coral/20" />
+        </label>
+
+        <label class="space-y-2 text-sm text-paper/70">
+          <span class="font-bold text-white">Description</span>
+          <textarea id="product-description" rows="4" placeholder="Une description courte et utile pour la carte." class="w-full rounded-3xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none focus:border-coral focus:ring-2 focus:ring-coral/20"></textarea>
+        </label>
+
+        <label class="space-y-2 text-sm text-paper/70">
+          <span class="font-bold text-white">Tags (séparés par des virgules)</span>
+          <input id="product-tags" type="text" placeholder="set, accessoires, été" class="w-full rounded-3xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none focus:border-coral focus:ring-2 focus:ring-coral/20" />
+        </label>
+
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <button type="button" id="copy-snippet" class="inline-flex items-center justify-center rounded-2xl bg-coral px-5 py-4 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-coral-strong">Copier le code</button>
+          <p class="text-sm text-paper/70">Le HTML généré est prêt à être collé dans la page correspondante.</p>
+        </div>
+
+        <div>
+          <label class="space-y-2 text-sm text-paper/70">
+            <span class="font-bold text-white">Code HTML généré</span>
+            <textarea id="generated-html" rows="10" class="w-full rounded-3xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none" readonly></textarea>
+          </label>
+        </div>
+      </form>
+
+      <div class="space-y-6">
+        <div class="rounded-[2rem] border border-white/10 bg-white/6 p-6 shadow-panel backdrop-blur-xl">
+          <p class="text-xs font-extrabold uppercase tracking-[0.3em] text-coral-soft">Aperçu du produit</p>
+          <div id="product-preview" class="mt-6 rounded-[2rem] border border-white/10 bg-black/20 p-4"></div>
+        </div>
+        <div class="rounded-[2rem] border border-white/10 bg-black/20 p-6 shadow-panel backdrop-blur-xl">
+          <p class="text-sm leading-7 text-paper/70">Utilise cette page pour préparer un article sans toucher aux fichiers produits. Copie le résultat dans la section adaptée de "dames.html", "hommes.html" ou "accessoires.html".</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const escapeHtml = (value) => String(value ?? "").replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+
+    const formElements = {
+      category: document.getElementById('product-category'),
+      name: document.getElementById('product-name'),
+      price: document.getElementById('product-price'),
+      image: document.getElementById('product-image'),
+      phone: document.getElementById('product-phone'),
+      description: document.getElementById('product-description'),
+      tags: document.getElementById('product-tags')
+    };
+
+    const preview = document.getElementById('product-preview');
+    const generated = document.getElementById('generated-html');
+    const copyButton = document.getElementById('copy-snippet');
+
+    const buildCardHtml = ({ category, name, price, image, phone, description, tags }) => {
+      const safeName = escapeHtml(name);
+      const safePrice = escapeHtml(price);
+      const safeCategory = escapeHtml(category);
+      const safeImage = escapeHtml(image);
+      const safePhone = escapeHtml(phone);
+      const safeDescription = escapeHtml(description);
+      const safeTags = tags.filter(Boolean).map((tag) => `<span class="rounded-full border border-white/10 px-3 py-2 text-xs font-bold text-paper/70">${escapeHtml(tag.trim())}</span>`).join('');
+
+      return `<!-- Copie ce bloc dans la page correspondante -->\n<article class="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 shadow-panel backdrop-blur-xl" data-product-name="${safeName}" data-product-price="${safePrice}" data-product-category="${safeCategory}" data-product-image="${safeImage}" data-product-description="${safeDescription}" data-product-phone="${safePhone}">\n  <div class="rounded-[1.7rem] bg-center bg-cover p-6" style="background-image: url('${safeImage}');">\n    <div class="flex min-h-64 items-end rounded-[1.5rem] border border-white/12 bg-white/10 p-4"></div>\n  </div>\n  <div class="px-2 pb-2 pt-5">\n    <div class="flex items-start justify-between gap-3">\n      <h3 class="text-xl font-extrabold text-white">${safeName}</h3>\n      <span class="rounded-full bg-coral/14 px-3 py-1 text-sm font-extrabold text-coral-soft">${safePrice}</span>\n    </div>\n    <p class="mt-4 text-sm leading-7 text-paper/68">${safeDescription}</p>\n    <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-paper/70">${safeTags}</div>\n    <div class="mt-6 flex flex-wrap justify-center gap-3">\n      <button data-order-now class="rounded-2xl bg-green-600 px-4 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-green-500">Commander</button>\n      <button data-add-to-cart class="rounded-2xl border border-white/12 bg-white/8 px-4 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/12">Ajouter au panier</button>\n    </div>\n  </div>\n</article>`;
+    };
+
+    const renderPreview = ({ category, name, price, image, description, tags }) => {
+      const tagSpans = tags.filter(Boolean).map(tag => `<span class="rounded-full border border-white/10 px-3 py-2 text-xs font-bold text-paper/70">${escapeHtml(tag.trim())}</span>`).join('');
+      preview.innerHTML = `
+        <article class="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 shadow-panel backdrop-blur-xl">
+          <div class="rounded-[1.7rem] bg-center bg-cover p-6" style="background-image: url('${escapeHtml(image)}');">
+            <div class="flex min-h-64 items-end rounded-[1.5rem] border border-white/12 bg-white/10 p-4"></div>
+          </div>
+          <div class="px-2 pb-2 pt-5">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-xl font-extrabold text-white">${escapeHtml(name)}</h3>
+              <span class="rounded-full bg-coral/14 px-3 py-1 text-sm font-extrabold text-coral-soft">${escapeHtml(price)}</span>
+            </div>
+            <p class="mt-4 text-sm leading-7 text-paper/68">${escapeHtml(description)}</p>
+            <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-paper/70">${tagSpans}</div>
+          </div>
+        </article>`;
+    };
+
+    const updateGenerated = () => {
+      const values = {
+        category: formElements.category.value,
+        name: formElements.name.value,
+        price: formElements.price.value,
+        image: formElements.image.value,
+        phone: formElements.phone.value,
+        description: formElements.description.value,
+        tags: formElements.tags.value.split(',').map((tag) => tag.trim()).filter(Boolean)
+      };
+
+      generated.value = buildCardHtml(values);
+      renderPreview(values);
+    };
+
+    Object.values(formElements).forEach((element) => {
+      element.addEventListener('input', updateGenerated);
+    });
+
+    copyButton.addEventListener('click', () => {
+      generated.select();
+      document.execCommand('copy');
+      copyButton.textContent = 'Copié !';
+      setTimeout(() => { copyButton.textContent = 'Copier le code'; }, 1200);
+    });
+
+    updateGenerated();
+  </script>
+</body>
+</html>
